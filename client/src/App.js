@@ -1,28 +1,23 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as HashRouter, Route, Switch } from "react-router-dom";
+import Register from "./pages/register";
+import Login from "./pages/login";
+import NoMatch from "./pages/NoMatch";
+import indexRoutes from "./routes/index.jsx";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+// import "./App.css";
+
+const App = () => (
+  <HashRouter>
+    <Switch>
+      {/* <Route exact path="/" component={Login} />
+      <Route exact path="/register" component={Register} />
+      <Route path="*" component={NoMatch} />
+      {indexRoutes.map((prop, key) => {
+        return <Route to={prop.path} component={prop.component} key={key} />;
+      })} */}
+    </Switch>
+  </HashRouter>
+);
 
 export default App;
