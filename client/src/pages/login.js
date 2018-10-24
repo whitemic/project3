@@ -55,7 +55,7 @@ class Login extends Component {
     const { username, password, message } = this.state;
     return (
       <div className="Login">
-        <Row className="show-grid">
+        {/* <Row className="show-grid"> */}
         <Col md={6}>
           <div className="background" style={sidebarBackground}>
             <h1>Advanced Business Dashboard</h1>
@@ -117,7 +117,7 @@ class Login extends Component {
             </ButtonToolbar>
           </Form>
         </Col>
-        </Row>
+        {/* </Row> */}
       </div>
     );
   }
